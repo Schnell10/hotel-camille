@@ -1,0 +1,12 @@
+@import '../../styles/_variables.scss';
+
+.button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   button {
+      width: 100%;
+      transition: width 0.3s ease;
+   }
+}
