@@ -1,54 +1,89 @@
 @import '../../../styles/_variables.scss';
 
-.header header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 60px;
-   display: flex;
-
-   nav {
-      margin-left: 15px;
-      flex: 1;
+.header {
+   .header-fixed {
+      position: fixed;
+      top: 0.5px;
+      width: 100%;
+      height: 65px;
       display: flex;
-      justify-content: left;
-      align-items: center;
+      background-color: $white-color;
 
-      img {
-         width: 30px;
-         height: 24px;
+      nav {
+         margin-left: 15px;
+         flex: 1;
+         display: flex;
+         justify-content: left;
+         align-items: center;
+
+         img {
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+         }
       }
-   }
 
-   h1 {
-      width: 70px;
-      flex: 1;
-      display: flex;
-      justify-content: center;
-
-      img {
+      h1 {
          width: 70px;
+         flex: 1;
+         display: flex;
+         justify-content: center;
+
+         img {
+            cursor: pointer;
+            width: 70px;
+         }
+      }
+      a {
+         flex: 1;
+         display: flex;
+         justify-content: right;
+         margin-right: 15px;
+
+         .button {
+            width: 120px;
+
+            button {
+               cursor: pointer;
+               border: 1px solid $grey-color;
+               background-color: $white-color;
+               color: $grey-color;
+               height: 34px;
+
+               &:hover {
+                  width: 80%;
+               }
+            }
+         }
       }
    }
-   a {
-      flex: 1;
+   .header-overlay {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
       display: flex;
-      justify-content: right;
-      margin-right: 15px;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      margin: 20px 0px;
 
-      .button {
-         width: 120px;
+      nav {
+         margin-left: 47px;
+         img {
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+         }
+      }
 
-         button {
-            border: 1px solid $grey-color;
-            background-color: $white-color;
-            color: $grey-color;
-            height: 34px;
+      a {
+         position: absolute;
+         left: 50%; /* Centrer horizontalement */
+         transform: translateX(-50%);
 
-            &:hover {
-               width: 80%;
-            }
+         img {
+            width: 91px;
+            cursor: pointer;
          }
       }
    }

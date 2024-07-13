@@ -1,0 +1,41 @@
+@import '../../styles/_variables.scss';
+
+.slideshow-container {
+   width: 100%;
+   height: 400px;
+   overflow: hidden;
+
+   .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+
+      .slide {
+         flex: 0 0 100%; /* Chaque slide occupe toute la largeur */
+
+         &.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+         }
+      }
+   }
+
+   .three-lines {
+      display: flex;
+      margin: 10px;
+      position: absolute;
+      .line {
+         width: 200px;
+         height: 10px;
+         background-color: $grey-color;
+      }
+   }
+}
