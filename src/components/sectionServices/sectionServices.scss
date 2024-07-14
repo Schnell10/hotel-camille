@@ -1,0 +1,205 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/mixin';
+
+.services {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   position: relative;
+
+   .slideshow {
+      aspect-ratio: 1 / 0.46; // Maintient un ratio largeur/hauteur de 1:0.46
+   }
+
+   .slideshow-text {
+      width: 58%;
+
+      @include desktop-medium() {
+         width: 62%;
+      }
+
+      @include desktop-small() {
+         width: 64%;
+      }
+
+      .text-services {
+         display: flex;
+         flex-direction: column;
+         margin: 10% 10% 5% 30%;
+
+         @include desktop-medium() {
+            margin: 7% 7% 5% 30%;
+         }
+
+         @include desktop-small() {
+            margin: 6% 7% 5% 30%;
+         }
+
+         @include tablette() {
+            margin: 5% 6% 5% 15%;
+         }
+
+         h3 {
+            display: flex;
+            flex-direction: column;
+            font-family: $perpetualight;
+            font-weight: 300;
+            font-size: 40px;
+
+            @include desktop-medium() {
+               font-size: 35px;
+            }
+
+            @include desktop-small() {
+               font-size: 32px;
+            }
+
+            @include tablette() {
+               font-size: 25px;
+            }
+         }
+
+         .separator {
+            border: 1px solid $grey-color;
+            width: 40%;
+            margin: 22.5px 0 39.5px 0;
+
+            @include desktop-medium() {
+               margin: 20px 0 30px 0;
+            }
+
+            @include desktop-small() {
+               margin: 18px 0 27px 0;
+            }
+
+            @include tablette() {
+               margin: 15px 0 18px 0;
+            }
+         }
+
+         p {
+            margin-bottom: 61px;
+            font-family: $quicksand;
+            font-weight: normal;
+            font-size: 16px;
+            color: $grey-color;
+            margin-left: 45px;
+            line-height: 2; /* Espace de 2 fois la hauteur de la ligne */
+
+            @include desktop-medium() {
+               font-size: 15px;
+               margin-bottom: 50px;
+            }
+
+            @include desktop-small() {
+               font-size: 14px;
+               margin-bottom: 40px;
+            }
+
+            @include tablette() {
+               font-size: 13px;
+               line-height: 1.5;
+               margin-bottom: 20px;
+            }
+         }
+         .button {
+            width: 46%;
+
+            button {
+               width: 100%;
+               font-family: $quicksand;
+               font-size: 14px;
+               font-weight: 300;
+               background-color: $white-color;
+               border: 1px solid $grey-color;
+               padding: 22px 0;
+
+               @include desktop-small() {
+                  padding: 18px 0;
+               }
+
+               @include tablette() {
+                  padding: 14px 0;
+                  font-size: 13px;
+               }
+
+               &:hover {
+                  width: 90%;
+               }
+            }
+         }
+      }
+   }
+
+   .img-pool {
+      width: 42%;
+      aspect-ratio: 1 / 2.3; // Maintient un ratio largeur/hauteur de 1:2.3
+      object-fit: cover;
+
+      @include desktop-medium() {
+         width: 38%;
+         aspect-ratio: 1 / 3;
+      }
+
+      @include desktop-small() {
+         width: 36%;
+         aspect-ratio: 1 / 3.2;
+      }
+   }
+
+   .video-button {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 22%;
+      width: 46%;
+
+      .video {
+         display: flex;
+         align-items: center; // Pour centrer verticalement si nécessaire
+         justify-content: center; // Pour centrer horizontalement si nécessaire
+         position: relative;
+
+         .img-video {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 0.56;
+            object-fit: cover;
+         }
+
+         .play-icon {
+            position: absolute;
+            cursor: pointer;
+         }
+      }
+
+      a {
+         width: 38%;
+
+         .button {
+            width: 100%;
+
+            button {
+               border: none;
+               width: 100%;
+               height: 68px;
+               background-color: $brown-color;
+               font-family: $quicksand;
+               font-size: 14px;
+               color: $white-color;
+
+               @include tablette() {
+                  font-size: 13px;
+               }
+
+               &:hover {
+                  width: 90%;
+               }
+            }
+         }
+      }
+   }
+}

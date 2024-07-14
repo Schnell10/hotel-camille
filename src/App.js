@@ -7,6 +7,7 @@ import Offers from './pages/offers/Offers'
 import Restaurant from './pages/restaurant/Restaurant'
 import Rooms from './pages/rooms/Rooms'
 import Page404 from './pages/page-404/Page404'
+import Gallery from './pages/gallery/Gallery'
 
 function App() {
    return (
@@ -18,6 +19,7 @@ function App() {
                   <Route path="/book" element={<Book />} />
                   <Route path="/offers" element={<Offers />} />
                   <Route path="/restaurant" element={<Restaurant />} />
+                  <Route path="/gallery" element={<Gallery />} />
                   <Route path="/rooms" element={<Rooms />} />
                   <Route path="*" element={<Page404 />} />
                </Routes>

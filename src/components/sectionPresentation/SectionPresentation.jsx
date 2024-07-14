@@ -47,7 +47,9 @@ const SectionPresentation = () => {
                      accumsan tincidunt. Pellentesque in ipsum id orci porta
                      dapibus. Lorem ipsum dolor sit amet.
                   </p>
-                  <Button>VOIR LES CHAMBRES</Button>
+                  <Link to="rooms">
+                     <Button>VOIR LES CHAMBRES</Button>
+                  </Link>
                </div>
             </div>
             <img

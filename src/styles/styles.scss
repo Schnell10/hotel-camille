@@ -132,5 +132,9 @@ a {
 }
 
 body {
+   min-width: 320px;
+   max-width: 2100px;
    background-color: $white-color;
+   font-family: $quicksand;
+   color: $black-color;
 }

@@ -1,6 +1,19 @@
+@import '../../../styles/mixin';
+
 .footer footer {
    display: flex;
    justify-content: center;
    align-items: center;
    height: 361px;
+
+   @include tablette() {
+      height: 200px;
+   }
+
+   img {
+      width: 217px;
+      @include tablette() {
+         width: 180px;
+      }
+   }
 }

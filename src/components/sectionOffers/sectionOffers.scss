@@ -1,0 +1,44 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/mixin';
+
+.section-offers {
+   display: flex;
+   padding: 200px 0 200px 12%;
+
+   @include tablette() {
+      padding: 100px 0 100px 5%;
+   }
+
+   .title-separator {
+      writing-mode: vertical-rl; /* Écriture verticale de haut en bas */
+      text-orientation: mixed; /* Orientation du texte */
+      transform: rotate(-180deg); /* Rotation de 180 degrés */
+      font-family: $perpetualight;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 35px;
+
+      @include tablette() {
+         gap: 20px;
+      }
+
+      h3 {
+         font-family: $perpetualight;
+         font-size: 30px;
+         @include tablette() {
+            font-size: 25px;
+         }
+      }
+
+      .separator {
+         border: 1px solid $grey-color;
+         height: 345px;
+      }
+   }
+   .cards {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+   }
+}

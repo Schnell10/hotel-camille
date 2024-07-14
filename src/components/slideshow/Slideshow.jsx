@@ -3,9 +3,9 @@ import './slideshow.scss'
 
 const Slideshow = () => {
    const images = [
-      'https://i.ibb.co/ccVbxrw/header-vertical.jpg',
-      'https://i.ibb.co/Wz4gmFt/header.jpg',
-      'https://i.ibb.co/23kvdrc/services-vertical.jpg',
+      'https://i.ibb.co/tZtN6tp/slideshow1.jpg',
+      'https://i.ibb.co/FnVy2kH/slideshow2.jpg',
+      'https://i.ibb.co/y6XLjP5/slideshow3.jpg',
    ]
 
    // État pour suivre l'index de l'image actuellement affichée

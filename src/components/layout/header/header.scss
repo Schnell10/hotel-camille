@@ -1,4 +1,5 @@
 @import '../../../styles/_variables.scss';
+@import '../../../styles/mixin';
 
 .header {
    .header-fixed {
@@ -8,6 +9,12 @@
       height: 65px;
       display: flex;
       background-color: $white-color;
+      z-index: 2;
+      box-shadow: 0px 10px 20px rgba($black-color, 0.05);
+
+      @include tablette() {
+         height: 55px;
+      }
 
       nav {
          margin-left: 15px;
@@ -20,6 +27,11 @@
             cursor: pointer;
             width: 30px;
             height: 24px;
+
+            @include tablette() {
+               width: 27px;
+               height: 22px;
+            }
          }
       }
 
@@ -32,6 +44,10 @@
          img {
             cursor: pointer;
             width: 70px;
+
+            @include tablette() {
+               width: 60px;
+            }
          }
       }
       a {
@@ -59,7 +75,7 @@
    }
    .header-overlay {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       width: 100%;
       display: flex;
       align-items: center;
@@ -73,6 +89,11 @@
             width: 30px;
             height: 24px;
             cursor: pointer;
+
+            @include tablette() {
+               width: 27px;
+               height: 22px;
+            }
          }
       }
 
@@ -84,6 +105,10 @@
          img {
             width: 91px;
             cursor: pointer;
+
+            @include tablette() {
+               width: 70px;
+            }
          }
       }
    }
