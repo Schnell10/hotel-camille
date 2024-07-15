@@ -1,0 +1,54 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixin.scss';
+
+@keyframes rotate {
+   from {
+      transform: rotate(0deg); // Début de l'animation : aucune rotation
+   }
+   to {
+      transform: rotate(
+         360deg
+      ); // Fin de l'animation : rotation complète (360 degrés)
+   }
+}
+.page-under-construction {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   gap: 80px;
+   margin: 120px 70px;
+   color: $brown-color;
+
+   h2 {
+      font-size: clamp(40px, 6.8vw, 134px);
+      font-weight: 700;
+      text-align: center;
+      font-family: $perpetualight;
+   }
+
+   p {
+      font-size: 36px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+
+      @include mobile() {
+         font-size: 20px;
+      }
+   }
+
+   a {
+      color: $brown-color;
+      text-decoration: none;
+      text-decoration: underline $brown-color;
+      font-size: 18px;
+   }
+
+   .spinner {
+      width: 50px;
+      height: 50px;
+      animation: rotate 1s linear infinite; /* Animation du spinner : rotation pendant 1 seconde en boucle */
+   }
+}

@@ -1,11 +1,8 @@
 import React from 'react'
+import PageUnderConstruction from '../../components/pageUnderConstruction/PageUnderConstruction'
 
 const Book = () => {
-   return (
-      <div>
-         <p>test</p>
-      </div>
-   )
+   return <PageUnderConstruction />
 }
 
 export default Book

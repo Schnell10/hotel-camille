@@ -1,7 +1,8 @@
 import React from 'react'
+import PageUnderConstruction from '../../components/pageUnderConstruction/PageUnderConstruction'
 
 const Offers = () => {
-   return <div></div>
+   return <PageUnderConstruction />
 }
 
 export default Offers
