@@ -21,6 +21,7 @@ const SectionOffers = () => {
                   <img
                      src="https://i.ibb.co/y42N5LG/offre1.jpg"
                      alt="chambre d'hôtel avec lit a rotin"
+                     loading="lazy"
                   />
                }
             />
@@ -31,7 +32,11 @@ const SectionOffers = () => {
                   </h4>
                }
                image={
-                  <img src="https://i.ibb.co/26JCxDD/video.jpg" alt="video" />
+                  <img
+                     src="https://i.ibb.co/26JCxDD/video.jpg"
+                     alt="video"
+                     loading="lazy"
+                  />
                }
             />
          </div>

@@ -9,6 +9,11 @@
       padding: 100px 0 100px 5%;
    }
 
+   @include mobile() {
+      padding: 60px 0 0 7.5%;
+      gap: 7.5%;
+   }
+
    .title-separator {
       writing-mode: vertical-rl; /* Écriture verticale de haut en bas */
       text-orientation: mixed; /* Orientation du texte */
@@ -23,11 +28,19 @@
          gap: 20px;
       }
 
+      @include mobile() {
+         gap: 7px;
+      }
+
       h3 {
          font-family: $perpetualight;
          font-size: 30px;
          @include tablette() {
             font-size: 25px;
+         }
+
+         @include mobile() {
+            font-size: 32px;
          }
       }
 
@@ -40,5 +53,9 @@
       display: flex;
       justify-content: center;
       gap: 50px;
+
+      @include mobile() {
+         flex-direction: column;
+      }
    }
 }

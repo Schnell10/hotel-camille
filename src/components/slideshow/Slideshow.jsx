@@ -37,6 +37,7 @@ const Slideshow = () => {
                   <img
                      src={image}
                      alt={`Slide ${index + 1}`}
+                     loading="lazy"
                      onClick={handleClick}
                   />
                </div>

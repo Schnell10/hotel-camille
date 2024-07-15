@@ -1,16 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Website Hotel Camille"
-    />
-    <title>Hotel Camille</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Website Hotel Camille" />
+      <!-- Balises Open Graph -->
+      <meta property="og:title" content="Hôtel Camille" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hotel-camille.vercel.app/" />
+      <meta property="og:image" content="https://i.ibb.co/fGrV0k8/header.jpg" />
+      <meta
+         property="og:description"
+         content="Site vitrine de l'Hôtel Camille"
+      />
+      <!-- Twitter summary card with large image must be at least 280x150px -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Hôtel Camille" />
+      <meta
+         name="twitter:description"
+         content="Site vitrine de l'Hôtel Camille"
+      />
+      <meta
+         name="twitter:image"
+         content="https://i.ibb.co/fGrV0k8/header.jpg"
+      />
+
+      <!-- Balises Schema.org pour le site -->
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://hotel-camille.vercel.app/",
+            "name": "Website Hotel Camille",
+            "description": "Site vitrine de l'Hôtel Camille"
+         }
+      </script>
+
+      <title>Hotel Camille</title>
+      <!-- Préchargement de l'image -->
+      <link
+         rel="preload"
+         href="https://i.ibb.co/fGrV0k8/header.jpg"
+         as="image"
+      />
+   </head>
+   <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+   </body>
 </html>

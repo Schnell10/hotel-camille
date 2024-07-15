@@ -10,10 +10,19 @@
       height: 200px;
    }
 
+   @include mobile() {
+      height: 66px;
+      margin-top: 60px;
+   }
+
    img {
       width: 217px;
       @include tablette() {
          width: 180px;
+      }
+
+      @include mobile() {
+         width: 72px;
       }
    }
 }

@@ -11,10 +11,14 @@ const CardOffer = ({ title, image }) => {
             {title}
             <p>
                Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci
-               porta dapibus. Lorem ipsum dolor sit amet.Nulla porttitor
-               accumsan tincidunt. Pellentesque in ipsum id.
+               porta dapibus.
+               <span>
+                  {' '}
+                  Lorem ipsum dolor sit amet.Nulla porttitor accumsan tincidunt.
+                  Pellentesque in ipsum id.
+               </span>
             </p>
-            <p>A PARTIR DE 125 EUR</p>
+            <p className="price">A PARTIR DE 125 EUR</p>
             <Link to="/offers">
                <Button>EN SAVOIR PLUS</Button>
             </Link>

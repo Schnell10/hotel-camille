@@ -11,6 +11,11 @@ const SectionServices = () => {
          <div className="slideshow-text">
             <div className="slideshow">
                <Slideshow />
+               <img
+                  className="slideshow-mobile"
+                  src="https://i.ibb.co/tZtN6tp/slideshow1.jpg"
+                  alt="salle de bain d'une chambre d'hotel"
+               />
             </div>
             <div className="text-services">
                <h3>
@@ -36,7 +41,7 @@ const SectionServices = () => {
             className="img-pool"
             src="https://i.ibb.co/23kvdrc/services-vertical.jpg"
             alt="Vu sur la piscine d'un hôtel"
-            border="0"
+            loading="lazy"
          />
          <div className="video-button">
             <div className="video">
@@ -44,6 +49,7 @@ const SectionServices = () => {
                   className="img-video"
                   src="https://i.ibb.co/26JCxDD/video.jpg"
                   alt="video intérieur restaurant"
+                  loading="lazy"
                />
                <svg
                   className="play-icon"

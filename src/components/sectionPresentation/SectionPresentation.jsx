@@ -8,9 +8,8 @@ const SectionPresentation = () => {
       <div className="presentation">
          <div className="banner">
             <img
-               src="https://i.ibb.co/Wz4gmFt/header.jpg"
+               src="https://i.ibb.co/fGrV0k8/header.jpg"
                alt="Intérieur d'une chambre de l'hôtel"
-               border="0"
             />
 
             <div className="text-header">
@@ -55,7 +54,7 @@ const SectionPresentation = () => {
             <img
                src="https://i.ibb.co/ccVbxrw/header-vertical.jpg"
                alt="Plusieurs plumes d'oiseaux"
-               border="0"
+               loading="lazy"
             />
          </div>
       </div>
