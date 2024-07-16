@@ -2,16 +2,21 @@ import React from 'react'
 import CardOffer from '../cardOffer/CardOffer'
 
 import './sectionOffers.scss'
+import { useInView } from 'react-intersection-observer'
 
 const SectionOffers = () => {
+   const { ref, inView } = useInView({
+      threshold: 0.4, // Déclenche l'observation lorsque 40% de l'élément est visible
+   })
    return (
-      <div className="section-offers">
+      <div className={`section-offers ${inView ? 'visible' : ''}`} ref={ref}>
          <div className="title-separator">
             <h3>NOS OFFRES DU MOMENT</h3>
             <div className="separator" />
          </div>
          <div className="cards">
             <CardOffer
+               className="card-one"
                title={
                   <h4>
                      SAINT<span>VALENTIN</span>
@@ -26,6 +31,7 @@ const SectionOffers = () => {
                }
             />
             <CardOffer
+               className="card-two"
                title={
                   <h4>
                      UN REPAS<span>OFFERT</span>

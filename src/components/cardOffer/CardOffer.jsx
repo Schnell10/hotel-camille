@@ -4,9 +4,9 @@ import './cardOffer.scss'
 import { Link } from 'react-router-dom'
 import Button from '../button/Button'
 
-const CardOffer = ({ title, image }) => {
+const CardOffer = ({ className, title, image }) => {
    return (
-      <div className="card-offer">
+      <div className={className}>
          <div className="card-offer-text">
             {title}
             <p>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import './header.scss'
 import blackLogo from '../../../assets/logo/logo-compact-black.svg'
@@ -7,16 +7,25 @@ import whiteLogo from '../../../assets/logo/logo-compact-white.svg'
 import menuBurgerWhite from '../../../assets/image/menu-burger-white.svg'
 import { Link } from 'react-router-dom'
 import Button from '../../button/Button'
+import LeftMenu from './leftMenu/LeftMenu'
 
 const Header = () => {
-   const location = useLocation()
+   const location = useLocation() //Hook pour voir sur quel page on se trouve
+   const [isMenuOpen, setIsMenuOpen] = useState(false) // État pour le menu ouvert
+   const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen) // Inverse l'état du menu
+   }
 
    return (
       <header className="header">
          <div className="header-fixed">
-            <nav>
-               <img src={menuBurgerBlack} alt="Menu burger" />
-            </nav>
+            <div className="first-burger-menu">
+               <img
+                  src={menuBurgerBlack}
+                  alt="Menu burger"
+                  onClick={toggleMenu}
+               />
+            </div>
             <Link to="/">
                <h1>
                   <img
@@ -32,9 +41,9 @@ const Header = () => {
          </div>
          {location.pathname === '/' && (
             <div className="header-overlay">
-               <nav>
+               <div className="second-burger-menu" onClick={toggleMenu}>
                   <img src={menuBurgerWhite} alt="Menu burger" />
-               </nav>
+               </div>
                <Link to="/">
                   <h1>
                      <img
@@ -46,6 +55,7 @@ const Header = () => {
                </Link>
             </div>
          )}
+         <LeftMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       </header>
    )
 }

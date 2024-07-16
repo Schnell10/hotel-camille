@@ -3,7 +3,7 @@
 
 .header {
    .header-fixed {
-      max-width: 2100px;
+      max-width: 1920px;
       position: fixed;
       top: 0.5px;
       width: 100%;
@@ -21,7 +21,7 @@
          height: 40px;
       }
 
-      nav {
+      .first-burger-menu {
          flex: 1;
          display: flex;
          justify-content: left;
@@ -110,14 +110,14 @@
       position: absolute;
       z-index: 4;
       width: 100%;
-      max-width: 2100px;
+      max-width: 1920px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 70px;
       margin: 20px 0px;
 
-      nav {
+      .second-burger-menu {
          margin-left: 47px;
          img {
             width: 30px;

@@ -1,152 +1,15 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/mixin';
+@import '../../styles/keyFrames';
 
 .presentation {
    display: flex;
    flex-direction: column;
    position: relative;
    z-index: 3;
+   overflow: hidden; // Afin que les image avec Parallax Effect ne soit pas visible sur les autres contenair de la page
 
    @include mobile() {
-   }
-
-   .banner {
-      position: relative;
-      display: flex;
-      justify-content: center;
-
-      img {
-         width: 100%;
-         object-fit: cover;
-         filter: brightness(70%);
-
-         @include mobile() {
-            height: 760px;
-            object-position: right;
-         }
-      }
-
-      .text-header {
-         position: absolute;
-         color: $white-color;
-         bottom: 8%;
-         left: 17%;
-         width: 100%;
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-end;
-         width: 65%;
-
-         @include mobile() {
-            left: auto;
-            bottom: 4%;
-            gap: 10px;
-            width: 85%;
-         }
-
-         h2 {
-            display: flex;
-            flex-direction: column;
-            font-family: $perpetualight;
-            font-size: clamp(40px, 6.8vw, 134px);
-
-            span {
-               margin-top: 1%;
-            }
-         }
-
-         .text-button {
-            display: flex;
-            justify-content: space-between;
-            height: fit-content;
-            margin-top: 8%;
-
-            @include tablette() {
-               margin-top: 4%;
-            }
-
-            @include mobile() {
-               flex-direction: column;
-               gap: 60px;
-            }
-
-            p {
-               filter: brightness(70%);
-               line-height: 1.5; /* Espace de 1.5 fois la hauteur de la ligne */
-               font-family: $quicksand;
-               font-size: 20px;
-               width: 45%;
-
-               @include desktop-medium() {
-                  width: 62%;
-                  font-size: 18px;
-               }
-
-               @include desktop-small() {
-                  width: 66%;
-                  font-size: 17px;
-               }
-
-               @include tablette() {
-                  font-size: 15px;
-               }
-
-               @include mobile() {
-                  width: 100%;
-                  font-size: 14px;
-               }
-            }
-
-            a {
-               z-index: 2;
-               width: 190px;
-               height: 132px;
-
-               @include desktop-medium() {
-                  width: 152px;
-                  height: 106px;
-               }
-
-               @include desktop-small() {
-                  width: 121px;
-                  height: 87px;
-               }
-
-               @include tablette() {
-                  width: 97px;
-                  height: 70px;
-               }
-               @include mobile() {
-                  width: 119px;
-                  height: 34px;
-                  align-self: flex-end;
-               }
-
-               .button {
-                  height: 100%;
-
-                  button {
-                     height: 100%;
-                     font-family: $quicksand;
-                     font-weight: 500;
-                     font-size: 14px;
-                     color: $grey-color;
-                     background-color: $white-color;
-                     border: none;
-
-                     &:hover {
-                        width: 90%;
-
-                        @include mobile() {
-                           width: 100%;
-                        }
-                     }
-                  }
-               }
-            }
-         }
-      }
    }
 
    .timeless-place {
@@ -173,10 +36,30 @@
             width: 100%;
          }
 
+         &.visible .text-presentation {
+            animation: slideFromLeft 1.5s ease-out forwards;
+
+            @include mobile() {
+               animation: slideFromLeft 1.5s ease-out forwards;
+            }
+         }
+
+         &:not(.visible) .text-presentation {
+            animation: slideOutLeft 2s ease-out forwards;
+
+            @include mobile() {
+               animation: slideOutLeft 1s ease-out forwards;
+            }
+         }
+
          .text-presentation {
             display: flex;
             flex-direction: column;
             width: 50%;
+            transform: translateX(
+               -100%
+            ); /* on le caché sur le côté gauche par défaut */
+            opacity: 0; /* idem */
 
             @include desktop-small() {
                margin: 20px 0;
@@ -306,6 +189,7 @@
          position: absolute;
          right: 0;
          bottom: 0;
+         animation: slideFromBottom 3s ease forwards;
 
          @include mobile() {
             display: none;

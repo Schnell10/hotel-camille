@@ -2,35 +2,22 @@ import React from 'react'
 import './sectionPresentation.scss'
 import Button from '../button/Button'
 import { Link } from 'react-router-dom'
+import { useInView } from 'react-intersection-observer'
+import Banner from './banner/Banner'
 
 const SectionPresentation = () => {
+   const { ref, inView } = useInView({
+      threshold: 0.4, // Déclenche l'observation lorsque 40% de l'élément est visible
+   })
+
    return (
       <div className="presentation">
-         <div className="banner">
-            <img
-               src="https://i.ibb.co/fGrV0k8/header.jpg"
-               alt="Intérieur d'une chambre de l'hôtel"
-            />
-
-            <div className="text-header">
-               <h2>
-                  UN COCON <span>DANS LA VILLE</span>
-               </h2>
-               <div className="text-button">
-                  <p>
-                     Nulla porttitor accumsan tincidunt. Pellentesque in ipsum
-                     id orci porta dapibus. Lorem ipsum dolor sit amet.Nulla
-                     porttitor accumsan tincidunt. Pellentesque in ipsum id orci
-                     porta dapibus. Lorem ipsum dolor sit amet.
-                  </p>
-                  <Link to="/book">
-                     <Button>Réserver</Button>
-                  </Link>
-               </div>
-            </div>
-         </div>
+         <Banner />
          <div className="timeless-place">
-            <div className="text-presentation-container">
+            <div
+               className={`text-presentation-container ${inView ? 'visible' : ''}`}
+               ref={ref}
+            >
                <div className="text-presentation">
                   <h3>
                      UN LIEU <span>HORS DU TEMPS</span>
@@ -54,7 +41,6 @@ const SectionPresentation = () => {
             <img
                src="https://i.ibb.co/ccVbxrw/header-vertical.jpg"
                alt="Plusieurs plumes d'oiseaux"
-               loading="lazy"
             />
          </div>
       </div>

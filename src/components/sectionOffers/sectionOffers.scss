@@ -1,9 +1,11 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/mixin';
+@import '../../styles/keyFrames';
 
 .section-offers {
    display: flex;
    padding: 200px 0 200px 12%;
+   overflow: hidden;
 
    @include tablette() {
       padding: 100px 0 100px 5%;
@@ -15,9 +17,9 @@
    }
 
    .title-separator {
-      writing-mode: vertical-rl; /* Écriture verticale de haut en bas */
-      text-orientation: mixed; /* Orientation du texte */
-      transform: rotate(-180deg); /* Rotation de 180 degrés */
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(-180deg);
       font-family: $perpetualight;
       display: flex;
       flex-direction: column;
@@ -57,5 +59,22 @@
       @include mobile() {
          flex-direction: column;
       }
+   }
+
+   &.visible {
+      .card-one {
+         animation: slideFromBottom 2s ease forwards;
+      }
+      .card-two {
+         animation: slideFromTop 2s ease forwards;
+      }
+   }
+
+   &:not(.visible) .card-one {
+      animation: slideOutBottom 2s ease forwards;
+   }
+
+   &:not(.visible) .card-two {
+      animation: slideFOutTop 2s ease forwards;
    }
 }

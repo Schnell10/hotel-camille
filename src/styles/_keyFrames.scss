@@ -1,0 +1,91 @@
+// Animation pour faire apparaitre par le côté gauche
+@keyframes slideFromLeft {
+   0% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+//Annimation pour faire sortir par le côté gauche
+@keyframes slideOutLeft {
+   0% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+}
+
+// Animation pour faire apparaitre par le côté droit
+@keyframes slideFromRight {
+   0% {
+      transform: translateX(100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+// Animation pour faire apparaitre par le haut
+@keyframes slideFromTop {
+   0% {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+// Animation pour faire apparaitre par le haut x10
+@keyframes slideFromHightTop {
+   0% {
+      transform: translateY(-1000%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+// Animation pour faire sortir par le haut
+@keyframes slideFOutTop {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+}
+
+// Animation pour faire apparaitre par le bas
+@keyframes slideFromBottom {
+   0% {
+      transform: translateY(100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+// Animation pour faire sortir par le bas
+@keyframes slideOutBottom {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(100%);
+      opacity: 0;
+   }
+}

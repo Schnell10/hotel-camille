@@ -21,18 +21,22 @@
    color: $brown-color;
 
    h2 {
-      font-size: clamp(40px, 6.8vw, 134px);
+      font-size: 50px;
       font-weight: 700;
       text-align: center;
       font-family: $perpetualight;
+
+      @include mobile() {
+         font-size: 40px;
+      }
    }
 
    p {
       font-size: 36px;
       text-align: center;
-
       display: flex;
       flex-direction: column;
+      color: $grey-color;
 
       @include mobile() {
          font-size: 20px;
@@ -44,11 +48,5 @@
       text-decoration: none;
       text-decoration: underline $brown-color;
       font-size: 18px;
-   }
-
-   .spinner {
-      width: 50px;
-      height: 50px;
-      animation: rotate 1s linear infinite; /* Animation du spinner : rotation pendant 1 seconde en boucle */
    }
 }
