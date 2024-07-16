@@ -1,4 +1,4 @@
-# Nouvelle Version du Site Web de l'Hôtel Camille
+# Test Technique : Refonte du Site Web de l'Hôtel Camille
 
 Ce projet représente la refonte du site web de l'Hôtel Camille, une interface moderne et conviviale conçue pour mettre en valeur les services et les offres de l'hôtel. Réalisé avec React et SCSS, ce projet intègre des fonctionnalités avancées pour offrir une expérience utilisateur optimale.
 
