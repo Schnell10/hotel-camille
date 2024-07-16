@@ -7,7 +7,7 @@ const Spinner = () => {
       <div className="spinner">
          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <style>{`.st0{fill:#C2A68B;}`}</style>{' '}
-            {/* Style spécifique pour le spinner */}
+            {/* style spécifique pour le spinner */}
             <g>
                <g>
                   <path

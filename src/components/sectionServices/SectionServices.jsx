@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import Slideshow from '../slideshow/Slideshow'
-
 import './sectionServices.scss'
 import Button from '../button/Button'
+import Slideshow from '../slideshow/Slideshow'
 import { Link } from 'react-router-dom'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 import { useInView } from 'react-intersection-observer'
 import Video from './video/Video'
 
 const SectionServices = () => {
-   const [isVisible, setIsVisible] = useState(false)
+   const [isVisible, setIsVisible] = useState(false) // state pour mettre la classe visible si on survol l'element
    const { ref, inView } = useInView({
       threshold: 0.5, // seuil d'intersection
    })

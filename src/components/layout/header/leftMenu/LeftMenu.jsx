@@ -4,12 +4,15 @@ import './leftMenu.scss'
 
 const LeftMenu = ({ isOpen, toggleMenu }) => {
    const handleOverlayClick = () => {
-      toggleMenu() // Ferme le menu lors du clic sur le voile
+      toggleMenu() // Ferme le menu
    }
 
    return (
-      <div className={`left-menu ${isOpen ? 'open' : ''}`}>
-         <nav onClick={handleOverlayClick}>
+      <div
+         className={`left-menu ${isOpen ? 'open' : ''}`}
+         onClick={handleOverlayClick}
+      >
+         <nav>
             <ul>
                <li>
                   <Link to="/book">Réserver</Link>
@@ -28,7 +31,7 @@ const LeftMenu = ({ isOpen, toggleMenu }) => {
                </li>
             </ul>
          </nav>
-         <div className="overlay" onClick={handleOverlayClick} />
+         <div className="overlay" />
       </div>
    )
 }

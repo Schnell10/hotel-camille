@@ -7,6 +7,7 @@ class Banner extends Component {
    render() {
       return (
          <div className="banner">
+            {/* on utilise srcSet afin de choisir une image plus adapté à la taille de l'écran */}
             <img
                srcSet="
 https://i.ibb.co/fGrV0k8/header.jpg 1920w,

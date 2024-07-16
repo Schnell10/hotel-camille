@@ -89,3 +89,15 @@
       opacity: 0;
    }
 }
+
+//Rotation du spinned
+@keyframes rotate {
+   from {
+      transform: rotate(0deg); // Début de l'animation : aucune rotation
+   }
+   to {
+      transform: rotate(
+         360deg
+      ); // Fin de l'animation : rotation complète (360 degrés)
+   }
+}

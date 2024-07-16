@@ -14,7 +14,7 @@ function App() {
    return (
       <div>
          <Router>
-            {/* Composant ScrollToTop pour gérer le défilement vers le haut */}
+            {/* Composant ScrollToTop pour gérer le défilement vers le haut lorsqu'on change de page*/}
             <ScrollToTop />
             <Layout>
                <Routes>

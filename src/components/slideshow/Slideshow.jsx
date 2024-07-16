@@ -28,7 +28,6 @@ const Slideshow = () => {
             className="slides"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
          >
-            {/* Mapping à travers le tableau d'images */}
             {images.map((image, index) => (
                <div
                   key={index}

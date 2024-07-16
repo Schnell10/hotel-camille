@@ -1,12 +1,11 @@
 import React from 'react'
 import CardOffer from '../cardOffer/CardOffer'
-
 import './sectionOffers.scss'
 import { useInView } from 'react-intersection-observer'
 
 const SectionOffers = () => {
    const { ref, inView } = useInView({
-      threshold: 0.4, // Déclenche l'observation lorsque 40% de l'élément est visible
+      threshold: 0.4, // déclenche l'observation lorsque 40% de l'élément est visible
    })
    return (
       <div className={`section-offers ${inView ? 'visible' : ''}`} ref={ref}>

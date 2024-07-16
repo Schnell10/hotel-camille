@@ -7,7 +7,7 @@
    flex-direction: column;
    position: relative;
    z-index: 3;
-   overflow: hidden; // Afin que les image avec Parallax Effect ne soit pas visible sur les autres contenair de la page
+   overflow: hidden; // Afin que les image avec Parallax Effect ne soit pas visible sur les autres conteneur de la page
 
    @include mobile() {
    }
@@ -59,7 +59,7 @@
             transform: translateX(
                -100%
             ); /* on le caché sur le côté gauche par défaut */
-            opacity: 0; /* idem */
+            opacity: 0; /* on le rend invisible*/
 
             @include desktop-small() {
                margin: 20px 0;
